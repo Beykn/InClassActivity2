@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Java Jam Coffee House</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="CENG 311 Inclass Activity 2">
+    <style>
+        body {
+            background-image: url('coffee.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .content {
+            display: none;
+            background: rgba(0, 0, 0, 0.7); 
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        /* URL'deki hash (#menu, #music, #location) eşleşirse içeriği göster */
+        #menu:target,
+        #music:target,
+        #location:target {
+            display: block;
+        }
+
+        nav {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .center-table {
+            margin-left: auto;
+            margin-right: auto;
+            border-collapse: collapse; 
+            border: 1px solid white; /* Table border via CSS */
+        }
+
+        .center-table th,
+        .center-table td {
+            border: 1px solid white; /* Cell borders */
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <a href="#menu">Menu</a>
+    <a href="#music">Music</a>
+    <a href="#location">Location</a>
+</nav>
+
+<section id="menu" class="content">
+    <h2>Menu</h2>
+    <table class="center-table">
+        <tr>
+            <th colspan="2">Coffee Selections</th>
+        </tr>
+        <tr>
+            <td>Just Java</td>
+            <td>Regular house blend, decaffeinated coffee, or flavor of the day.<br>Endless Cup $2.00</td>
+        </tr>
+        <tr>
+            <td>Café au Lait</td>
+            <td>
+                House blended coffee infused into a smooth, steamed milk.
+                <ul>
+                    <li>Small $2.00</li>
+                    <li>Medium $4.00</li>
+                    <li>Large $6.00</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Caramel Macchiato</td>
+            <td>
+                Espresso with caramel and steamed milk.
+                <ul>
+                    <li>Small $3.00</li>
+                    <li>Medium $5.00</li>
+                    <li>Large $7.00</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+</section>
+
+<section id="music" class="content">
+    <h2>Music</h2>
+    <p>Enjoy live performances every weekend featuring local artists. 
+    Come and listen to relaxing jazz and indie music while sipping your favorite coffee.</p>
+</section>
+
+<section id="location" class="content">
+    <h2>Location</h2>
+    <p>JavaJam is located at 8544 University City Blvd, Charlotte, NC 28213. 
+    See <a href="http://maps.google.com">Google Maps</a> for directions.</p>
+</section>
+
+<p><i>Copyright &copy; JavaJam Coffee House<br>manager@javajam.com</i></p>
+
+</body>
+</html>
